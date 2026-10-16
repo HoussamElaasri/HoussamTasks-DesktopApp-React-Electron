@@ -1,0 +1,51 @@
+@import './variables.css';
+@import './reset.css';
+@import './animations.css';
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background-color: var(--soft-white);
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 0, 32, 0.2);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 0, 32, 0.4);
+}
+
+::selection {
+  background: var(--burgundy);
+  color: var(--text-on-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral-red);
+  outline-offset: 1px;
+}
+
+/* Draggable regions for Electron frameless titlebar */
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}

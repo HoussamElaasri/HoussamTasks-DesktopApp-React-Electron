@@ -1,0 +1,114 @@
+.mindmap-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--soft-white);
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+  cursor: grab;
+}
+
+.mindmap-container:active {
+  cursor: grabbing;
+}
+
+.mindmap-toolbar {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: var(--soft-white);
+  padding: 4px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+.mindmap-tool-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: none;
+  font-size: 16px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mindmap-tool-btn:hover {
+  background-color: var(--warm-cream);
+}
+
+.mindmap-add-btn {
+  padding: 4px 10px;
+  background-color: var(--burgundy);
+  color: var(--text-on-dark);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.mindmap-add-btn:hover {
+  background-color: var(--burgundy-light);
+}
+
+.mindmap-svg-canvas {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.mindmap-connection-line {
+  transition: stroke 200ms ease;
+  opacity: 0.7;
+}
+
+.mindmap-center-rect {
+  fill: var(--burgundy);
+  filter: drop-shadow(0 4px 12px rgba(128, 0, 32, 0.25));
+}
+
+.mindmap-center-text {
+  fill: var(--text-on-dark);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  pointer-events: none;
+}
+
+.mindmap-task-node {
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.mindmap-task-node:hover {
+  filter: drop-shadow(0 4px 12px rgba(128, 0, 32, 0.15));
+}
+
+.mindmap-node-rect {
+  fill: var(--soft-white);
+  stroke: var(--border);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.05));
+}
+
+.mindmap-node-rect.is-done {
+  opacity: 0.6;
+  fill: var(--warm-cream);
+}
+
+.mindmap-node-text {
+  fill: var(--text-primary);
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font-family);
+  pointer-events: none;
+}

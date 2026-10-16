@@ -1,0 +1,29 @@
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 2px 8px;
+  border-radius: var(--radius-2xl);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.tag-remove-btn {
+  background: none;
+  border: none;
+  font-size: 9px;
+  cursor: pointer;
+  opacity: 0.6;
+  padding: 0 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-fast);
+}
+
+.tag-remove-btn:hover {
+  opacity: 1;
+}

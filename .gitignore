@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Production builds & binary outputs
+dist/
+release/
+temp_asar/
+
+# Local SQLite databases (each user gets their own)
+*.db
+*.db-journal
+*.db-wal
+houssam-tasks.db
+
+# OS files & logs
+*.log
+.DS_Store
+Thumbs.db
